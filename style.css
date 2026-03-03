@@ -94,6 +94,17 @@ main {
     min-width: 259px;
 }
 
+article {
+  padding-bottom: 100px; /* Isso cria um espaço vazio no fim da página para a Navbar "morar" sem cobrir nada */
+}
+
+/* Ou especificamente para telas mobile, se a Navbar só for fixa embaixo nelas */
+@media (max-width: 580px) {
+  body {
+    padding-bottom: 80px; 
+  }
+}
+
 .sidebar, article {
     background: var(--eerie-black2);
     border: 1px solid var(--jet);
@@ -403,8 +414,7 @@ article { display: none; }
     bottom: 0;
     left: 0;
     width: 100%;
-    background: hsla(240, 1%, 17%, .75);
-    backdrop-filter: blur(10px);
+    background: hsl(240, 1%, 17%);
     border: 1px solid var(--jet);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow2);
@@ -413,16 +423,18 @@ article { display: none; }
 
 .navbar-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 32px;
+    padding: 0 8px;
+}
+
+.navbar-item {
+    width: 100%;
 }
 
 .navbar-link {
     color: var(--light-gray);
     font-size: var(--fs8);
-    padding: 20px 7px;
+    padding: 20px 0px;
     transition: color var(--transition1);
     align-items: center;
     display: flex;
@@ -539,6 +551,10 @@ article { display: none; }
     box-shadow: var(--shadow1);
 }
 
+.testimonials-avatar-box img {
+            border-radius: 20px !important;
+        }
+
 .testimonials-text {
     color: var(--light-gray);
     font-size: var(--fs6);
@@ -562,6 +578,19 @@ article { display: none; }
  .h3.clients-title{
     margin-top: 48px;
  }
+
+ /* Por padrão (Mobile), o item ocupa 85% para sobrar 15% para o próximo card */
+.testimonials-item {
+    min-width: 85%; /* Antes era 100% */
+    scroll-snap-align: center;
+}
+
+/* Em telas maiores (Desktop), você pode voltar para 100% ou exibir 2 itens */
+@media (min-width: 768px) {
+    .testimonials-item {
+        min-width: calc(50% - 15px); /* Exibe dois itens lado a lado no tablet/desktop */
+    }
+}
 
 /*MODAL CONTAINER*/
 
@@ -753,6 +782,20 @@ article { display: none; }
   100% {
     transform: translateX(-100%); /* Move o conteúdo para a esquerda */
   }
+}
+
+.clients-item {
+    /* Mostra 2 logos inteiros e cerca de 1/3 do próximo logo */
+    min-width: 40%; 
+    scroll-snap-align: center; /* Centraliza o item ao scrollar para melhor visualização */
+}
+
+/* Ajuste para telas maiores (Desktop) */
+@media (min-width: 768px) {
+    .clients-item {
+        /* No desktop, voltamos a mostrar mais logos por vez */
+        min-width: calc(25% - 15px); 
+    }
 }
 
 /*RESUME*/
