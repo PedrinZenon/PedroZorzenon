@@ -3,10 +3,10 @@
 :root {
     --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
     --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, .251) 3%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-    --bg-gradient-yellow1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-yellow1: linear-gradient(to bottom right, #FFDA6B 0%, hsla(36, 100%, 69%, 0) 50%);
     --bg-gradient-yellow2: linear-gradient(135deg, hsla(45, 100%, 71%, .251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
     --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+    --text-gradient-yellow: linear-gradient(to right, #FFDA6B, #FFDA6B);
 
     --jet: hsl(0, 0%, 22%);
     --onyx: hsl(240, 1%, 17%);
@@ -15,8 +15,8 @@
     --smoky-black: hsl(0, 0%, 7%);
     --white1: hsl(0, 0%, 100%);
     --white2: hsl(0, 0%, 98%);
-    --orange-yellow-crayola: hsl(45, 100%, 72%);
-    --vegas-gold: hsl(45, 54%, 58%);
+    --orange-yellow-crayola: #FFDA6B;
+    --vegas-gold: #FFDA6B;
     --light-gray: hsl(0, 0%, 84%);
     --light-gray70: hsla(0, 0%, 84%, .7);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -45,6 +45,18 @@
 
     --transition1: .25s ease;
     --transition2: .5s ease-in-out;
+
+    /* Semantic / contextual tokens */
+    --text-on-accent: hsl(0, 0%, 7%);           /* dark text that stays readable on accent color */
+    --overlay-bg: hsla(0, 0%, 0%, .7);           /* dark overlay (loading state) */
+    --overlay-hover: hsla(0, 0%, 0%, .5);        /* lighter overlay (project img hover) */
+    --yellow-alpha10: hsla(45, 100%, 71%, .1);   /* accent tint for status badge bg */
+    --shimmer-fg: hsla(0, 0%, 100%, .05);        /* skeleton shimmer highlight */
+    --success: #3ea542;                           /* success green */
+    --shadow-popup: 0 4px 8px hsla(0, 0%, 0%, .2);
+    --scrollbar-thumb: hsla(0, 0%, 100%, .1);
+    --scrollbar-thumb-hover: hsla(0, 0%, 100%, .15);
+    --scrollbar-inset: hsla(0, 0%, 100%, .11);
 }
 
 *, *::before, *::after {
@@ -76,7 +88,7 @@ input, textarea {
 
 ::selection {
     background: var(--orange-yellow-crayola);
-    color: var(--smoky-black);
+    color: var(--text-on-accent);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -127,7 +139,7 @@ article {
     display: flex;
     gap: 8px;
     align-items: baseline;
-    color: #fafafa;
+    color: var(--white2);
     font-size: 14px;
 }
 
@@ -135,7 +147,7 @@ article {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: #fafafa;
+    background: var(--white2);
     margin-top: 5px;
     align-self: center;
 }
@@ -391,20 +403,17 @@ article { display: none; }
 .social-item .social-link {
     color: var(--light-gray70);
     font-size: 24px;
-    transition: all 0.3;
-    background-color: rgb(36, 36, 36);
+    background-color: var(--eerie-black1);
     padding: 8px;
     border-radius: 14px;
-    border: 1px solid rgb(52, 52, 52);
+    border: 1px solid var(--jet);
     transition: all 0.3s;
 }
 
-    .social-item .social-link:hover { 
-        color: var(--white1); 
-        transition: all 0.3;
-        background-color: rgb(46, 46, 46);
-        border: 1px solid rgb(63, 63, 63);
-        transition: all 0.3s;
+    .social-item .social-link:hover {
+        color: var(--white1);
+        background-color: var(--onyx);
+        border: 1px solid var(--jet);
     }
 
 /*NAVBAR*/
@@ -414,7 +423,7 @@ article { display: none; }
     bottom: 0;
     left: 0;
     width: 100%;
-    background: hsl(240, 1%, 17%);
+    background: var(--onyx);
     border: 1px solid var(--jet);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow2);
@@ -628,7 +637,7 @@ article { display: none; }
     left: 0;
     width: 100%;
     height: 100vh;
-    background: hsl(0, 0%, 5%);
+    background: var(--smoky-black);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -745,7 +754,19 @@ article { display: none; }
         transition: var(--transition1);
     }
 
-        .clients-item img:hover { filter: grayscale(0);}
+        .clients-item img:hover { filter: grayscale(0); }
+
+[data-theme="light"] .clients-item img {
+    filter: grayscale(1) invert(0.88) brightness(0.55);
+}
+
+[data-theme="light"] .clients-item img:hover {
+    filter: grayscale(0) invert(0.88) brightness(0.55);
+}
+
+[data-theme="light"] .scroll-content img {
+    filter: invert(0.88) brightness(0.55);
+}
 
 .scroll-container {
   width: 100%;
@@ -969,7 +990,7 @@ article { display: none; }
     border-radius: 8px;
 }
 
-    .select-item button:hover { --eerie-black2: hsl(240, 2%, 20%); }
+    .select-item button:hover { background: var(--onyx); }
 
     .filters-container{
         display: flex;
@@ -1031,12 +1052,12 @@ article { display: none; }
 
         .project-item > a:hover img { transform: scale(1.1); }
 
-        .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, .5); }
+        .project-item > a:hover .project-img::before { background: var(--overlay-hover); }
 
 .project-item-icon-box {
     --scale: .8;
 
-    background: #3d3d3d;
+    background: var(--jet);
     color: var(--orange-yellow-crayola);
     position: absolute;
     top: 50%;
@@ -1055,6 +1076,56 @@ article { display: none; }
         --scale: 1;
         opacity: 1;
     }
+
+    /* Container do Loading */
+.project-item-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    backdrop-filter: blur(4px); /* Efeito de desfoque elegante */
+}
+
+/* Exibe apenas quando a classe .crafting está presente */
+.project-item.crafting .project-item-loading {
+    display: flex;
+}
+
+/* Estilo do Spinner (Roda de carregamento) */
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--jet);
+    border-top: 3px solid var(--orange-yellow-crayola);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.project-item-loading span {
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs6);
+    font-weight: var(--fw500);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Desativa o ícone de "olho" nos projetos em Crafting para não confundir */
+.project-item.crafting .project-item-icon-box {
+    display: none;
+}
 
 .project-title, .project-category { margin-left: 10px; }
 
@@ -1078,11 +1149,11 @@ article { display: none; }
     }
 
     .project-date{
-        background-color: rgb(41, 41, 41);
+        background-color: var(--eerie-black1);
         padding: 4px 8px;
         max-height: fit-content;
         border-radius: 12px;
-        border: 1px solid rgb(70, 70, 70);
+        border: 1px solid var(--jet);
         color: var(--light-gray70);
         font-size: 12px;
         font-weight: var(--fw300);
@@ -1131,7 +1202,7 @@ article { display: none; }
 
 /* Badge de status à direita */
 .project-status-badge {
-    background-color: rgba(255, 219, 112, 0.1);
+    background-color: var(--yellow-alpha10);
     padding: 4px 12px;
     max-height: fit-content;
     border-radius: 12px;
@@ -1153,7 +1224,7 @@ article { display: none; }
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(255, 255, 255, 0.05),
+        var(--shimmer-fg),
         transparent
     );
     animation: shimmer 3s infinite;
@@ -1251,15 +1322,15 @@ textarea.form-input {
                 bottom: 0;
                 left: 50%;
                 transform: translateX(-50%) translateY(100%);
-                background-color: #3ea542;
-                color: white;
+                background-color: var(--success);
+                color: var(--white1);
                 padding: 12px 20px;
                 border-radius: 24px;
                 display: flex;
                 align-items: center;
                 gap: 8px;
                 font-size: 16px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                box-shadow: var(--shadow-popup);
                 opacity: 0;
                 z-index: 9999;
                 transition: transform 0.4s ease, opacity 0.4s ease;
@@ -1623,12 +1694,12 @@ textarea.form-input {
 
     body::-webkit-scrollbar-thumb {
         border: 5px solid var(--smoky-black);
-        background: hsla(0, 0%, 100%, .1);
+        background: var(--scrollbar-thumb);
         border-radius: 20px;
-        box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, .11), inset -1px -1px 0 hsla(0, 0%, 100%, .11);
+        box-shadow: inset 1px 1px 0 var(--scrollbar-inset), inset -1px -1px 0 var(--scrollbar-inset);
     }
 
-    body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, .15); }
+    body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
     body::-webkit-scrollbar-button { height: 60px; }
 
     .sidebar, article { width: auto; }
@@ -1752,3 +1823,249 @@ textarea.form-input {
     }
 }
 
+
+/* =============================================
+   LIGHT THEME
+   ============================================= */
+
+[data-theme="light"] {
+    --bg-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 88%) 3%, hsl(0, 0%, 83%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, hsla(0, 0%, 95%, .6) 3%, hsla(0, 0%, 98%, 0) 100%), hsl(0, 0%, 97%);
+    --bg-gradient-yellow2: linear-gradient(135deg, hsla(45, 100%, 71%, .251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(0, 0%, 97%);
+    --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 72%) 0%, hsla(0, 0%, 72%, 0) 50%);
+    --text-gradient-yellow: linear-gradient(to right, #D2A10E, #D2A10E);
+    --orange-yellow-crayola: #D2A10E;
+    --vegas-gold: #D2A10E;
+
+    --jet: hsl(0, 0%, 80%);
+    --onyx: hsl(0, 0%, 88%);
+    --eerie-black1: hsl(0, 0%, 97%);
+    --eerie-black2: hsl(0, 0%, 95%);
+    --smoky-black: hsl(0, 0%, 91%);
+    --white1: hsl(0, 0%, 10%);
+    --white2: hsl(0, 0%, 8%);
+    --light-gray: hsl(0, 0%, 25%);
+    --light-gray70: hsla(0, 0%, 20%, .7);
+
+    --shadow1: -4px 8px 24px hsla(0, 0%, 0%, .08);
+    --shadow2: 0px 16px 30px hsla(0, 0%, 0%, .08);
+    --shadow3: 0px 16px 40px hsla(0, 0%, 0%, .08);
+    --shadow4: 0px 25px 50px hsla(0, 0%, 0%, .06);
+    --shadow5: 0px 24px 80px hsla(0, 0%, 0%, .08);
+
+    --overlay-bg: hsla(0, 0%, 0%, .45);
+    --overlay-hover: hsla(0, 0%, 0%, .35);
+    --yellow-alpha10: hsla(38, 90%, 45%, .12);
+    --shimmer-fg: hsla(0, 0%, 0%, .05);
+    --scrollbar-thumb: hsla(0, 0%, 0%, .15);
+    --scrollbar-thumb-hover: hsla(0, 0%, 0%, .25);
+    --scrollbar-inset: hsla(0, 0%, 0%, .08);
+}
+
+[data-theme="light"] body {
+    background: var(--smoky-black);
+}
+
+[data-theme="light"] .navbar {
+    background: var(--eerie-black1);
+    border-color: var(--jet);
+}
+
+[data-theme="light"] .social-item .social-link {
+    background-color: var(--onyx);
+    border-color: var(--jet);
+    color: var(--light-gray);
+}
+
+[data-theme="light"] .social-item .social-link:hover {
+    background-color: var(--jet);
+    border-color: var(--jet);
+    color: var(--white2);
+}
+
+[data-theme="light"] .form-input {
+    background: var(--eerie-black1);
+    color: var(--white2);
+    border-color: var(--jet);
+}
+
+[data-theme="light"] .filter-select {
+    background: var(--eerie-black2);
+}
+
+[data-theme="light"] .select-list {
+    background: var(--eerie-black2);
+    border-color: var(--jet);
+}
+
+[data-theme="light"] .select-item button {
+    background: var(--eerie-black2);
+}
+
+[data-theme="light"] body::-webkit-scrollbar-track {
+    background: var(--smoky-black);
+}
+
+[data-theme="light"] body::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-color: var(--smoky-black);
+}
+
+/* Override SVG icon stroke colors in light mode.
+   SVG presentation attributes have lower priority than CSS,
+   so no !important needed. */
+[data-theme="light"] [stroke="#FFDA6B"],
+[data-theme="light"] [stroke="#ffdb70"] {
+    stroke: var(--orange-yellow-crayola);
+}
+
+/* =============================================
+   CONTROLS PANEL (Theme + Language)
+   ============================================= */
+
+/* --- Mobile & Tablet: slide-out tab on left edge --- */
+.controls-panel {
+    position: fixed;
+    left: 0;
+    top: 88px;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+}
+
+.controls-handle {
+    flex-shrink: 0;
+    width: 22px;
+    height: 42px;
+    background: var(--eerie-black2);
+    border: 1px solid var(--jet);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    color: var(--light-gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: color var(--transition1);
+    box-shadow: 2px 0 6px hsla(0, 0%, 0%, .2);
+    padding: 0;
+}
+
+.controls-handle:hover {
+    color: var(--orange-yellow-crayola);
+}
+
+.controls-handle ion-icon {
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.controls-panel.open .controls-handle ion-icon {
+    transform: rotate(180deg);
+}
+
+/* Tray: proper floating card, appears to the right of handle */
+.controls-tray {
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+    background: var(--eerie-black2);
+    border: 1px solid var(--jet);
+    border-radius: 10px;
+    align-items: center;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    box-shadow: var(--shadow2);
+}
+
+.controls-panel.open .controls-tray {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.control-btn {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--jet);
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition1);
+    padding: 0;
+}
+
+.control-btn:hover {
+    color: var(--orange-yellow-crayola);
+    border-color: var(--orange-yellow-crayola);
+}
+
+.control-btn ion-icon {
+    display: block;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.control-btn .flag-icon {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    pointer-events: none;
+}
+
+/* --- Desktop (≥1024px): revert to original top-right floating buttons --- */
+@media (min-width: 1024px) {
+    .controls-panel {
+        top: 24px;
+        right: 28px;
+        left: auto;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+    }
+
+    .controls-handle {
+        display: none;
+    }
+
+    .controls-tray {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .controls-panel.open .controls-tray {
+        transform: none;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        background: var(--eerie-black2);
+        box-shadow: var(--shadow2);
+    }
+}
