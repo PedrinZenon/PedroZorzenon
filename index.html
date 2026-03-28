@@ -8,21 +8,6 @@
     <link rel="shortcut icon" href="components/images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Controls Panel: Theme + Language (slide from left) -->
-    <div class="controls-panel" id="controls-panel">
-        <button class="controls-handle" id="controls-handle" aria-label="Toggle controls">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
-        <div class="controls-tray">
-            <button class="control-btn" id="theme-toggle" title="Switch theme">
-                <ion-icon name="sunny-outline"></ion-icon>
-            </button>
-            <button class="control-btn" id="lang-toggle" title="Change language">
-                <img src="components/images/br_flag.png" alt="PT" class="flag-icon">
-            </button>
-        </div>
-    </div>
-
     <main>
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
@@ -39,6 +24,35 @@
                     <span data-i18n="show-contacts">Show Contacts</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
+            </div>
+
+            <!-- Controls: Theme + Language + Socials — visible inside sidebar on mobile/tablet -->
+            <div class="controls-panel" id="controls-panel">
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://dribbble.com/Pedro_zorzenon" target="_blank" class="social-link">
+                            <ion-icon name="logo-dribbble"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/pedro-zorzenon/" target="_blank" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/ux_pedrin/" target="_blank" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+                <div class="controls-btns">
+                    <button class="control-btn" id="theme-toggle" title="Switch theme">
+                        <ion-icon name="sunny-outline"></ion-icon>
+                    </button>
+                    <button class="control-btn" id="lang-toggle" title="Change language">
+                        <img src="components/images/br_flag.png" alt="PT" class="flag-icon">
+                    </button>
+                </div>
             </div>
 
             <div class="sidebar-info-more">
@@ -149,28 +163,26 @@
                     </li>
                 </ul>
 
-                <div class="separator"></div>
+                <div class="separator sidebar-social-sep"></div>
 
-                <ul class="social-list">
+                <ul class="social-list sidebar-social-list">
                     <li class="social-item">
                         <a href="https://dribbble.com/Pedro_zorzenon" target="_blank" class="social-link">
                             <ion-icon name="logo-dribbble"></ion-icon>
-                            <!-- <p>Dribble</p> -->
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://www.linkedin.com/in/pedro-zorzenon/" target="_blank" class="social-link">
                             <ion-icon name="logo-linkedin"></ion-icon>
-                            <!-- <p>LinkedIn</p> -->
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://www.instagram.com/ux_pedrin/" target="_blank" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
-                            <!-- <p>Instagram</p> -->
                         </a>
                     </li>
                 </ul>
+
             </div>
         </aside>
 
@@ -745,13 +757,13 @@ I define components, behaviors, and guidelines that bridge design and engineerin
 
                     <ul class="project-list">
                         <li class="project-item active" data-filter-item data-category="applications" data-date="2023">
-                            <a href="https://dribbble.com/shots/24561262-HourGlass-Project-UX-UI-Case-Study" target="_blank">
+                            <button data-nav-link data-target-page="hourglass" style="background:none;border:none;cursor:pointer;width:100%;text-align:left;padding:0;">
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <g clip-path="url(#clip0_4418_3424)">
-                                            <path d="M9.02992 13.9999C8.63992 13.4299 8.41992 12.7399 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799" stroke="#ffdb70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.5598 5.58047C15.8698 4.38047 13.9698 3.73047 11.9998 3.73047C8.46984 3.73047 5.17984 5.81047 2.88984 9.41047C1.98984 10.8205 1.98984 13.1905 2.88984 14.6005C5.17984 18.2005 8.46984 20.2805 11.9998 20.2805C15.5298 20.2805 18.8198 18.2005 21.1098 14.6005C22.0098 13.1905 22.0098 10.8205 21.1098 9.41047" stroke="#ffdb70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.02992 13.9999C8.63992 13.4299 8.41992 12.7399 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17.5598 5.58047C15.8698 4.38047 13.9698 3.73047 11.9998 3.73047C8.46984 3.73047 5.17984 5.81047 2.88984 9.41047C1.98984 10.8205 1.98984 13.1905 2.88984 14.6005C5.17984 18.2005 8.46984 20.2805 11.9998 20.2805C15.5298 20.2805 18.8198 18.2005 21.1098 14.6005C22.0098 13.1905 22.0098 10.8205 21.1098 9.41047" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_4418_3424">
@@ -771,27 +783,27 @@ I define components, behaviors, and guidelines that bridge design and engineerin
                                     </div>
                                     <p class="project-date">2023</p>
                                 </div>
-                            </a>
+                            </button>
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="web apps" data-date="2024">
-                            <a href="https://dribbble.com/shots/24561367-UX-UI-Project-Improvement-of-the-Ita-customer-service-process" target="_blank">
+                            <button data-nav-link data-target-page="itau" style="background:none;border:none;cursor:pointer;width:100%;text-align:left;padding:0;">
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <g clip-path="url(#clip0_4418_3424)">
-                                            <path d="M9.02992 13.9999C8.63992 13.4299 8.41992 12.7399 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799" stroke="#ffdb70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.5598 5.58047C15.8698 4.38047 13.9698 3.73047 11.9998 3.73047C8.46984 3.73047 5.17984 5.81047 2.88984 9.41047C1.98984 10.8205 1.98984 13.1905 2.88984 14.6005C5.17984 18.2005 8.46984 20.2805 11.9998 20.2805C15.5298 20.2805 18.8198 18.2005 21.1098 14.6005C22.0098 13.1905 22.0098 10.8205 21.1098 9.41047" stroke="#ffdb70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <g clip-path="url(#clip0_4418_3424b)">
+                                            <path d="M9.02992 13.9999C8.63992 13.4299 8.41992 12.7399 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799" stroke="#EC7000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17.5598 5.58047C15.8698 4.38047 13.9698 3.73047 11.9998 3.73047C8.46984 3.73047 5.17984 5.81047 2.88984 9.41047C1.98984 10.8205 1.98984 13.1905 2.88984 14.6005C5.17984 18.2005 8.46984 20.2805 11.9998 20.2805C15.5298 20.2805 18.8198 18.2005 21.1098 14.6005C22.0098 13.1905 22.0098 10.8205 21.1098 9.41047" stroke="#EC7000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </g>
                                             <defs>
-                                            <clipPath id="clip0_4418_3424">
+                                            <clipPath id="clip0_4418_3424b">
                                             <rect width="24" height="24" fill="white"/>
                                             </clipPath>
                                             </defs>
                                         </svg>
                                     </div>
 
-                                    <img src="components/images/Itau.png" alt="orizon" loading="lazy">
+                                    <img src="components/images/Itau.png" alt="Itaú" loading="lazy">
                                 </figure>
 
                                 <div class="project-details">
@@ -801,11 +813,11 @@ I define components, behaviors, and guidelines that bridge design and engineerin
                                     </div>
                                     <p class="project-date">2024</p>
                                 </div>
-                            </a>
+                            </button>
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="applications" data-date="2025">
-                            <a href="pockit.html">
+                            <a href="#" data-nav-link data-target-page="pockit">
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -968,6 +980,644 @@ I define components, behaviors, and guidelines that bridge design and engineerin
                     <span data-i18n="msg-sent">Message sent!</span>
                 </div>
             </article>
+
+            <!-- ══════════════════════════════════
+                 POCKIT CASE STUDY
+                 ══════════════════════════════════ -->
+            <article class="pockit" data-page="pockit">
+
+                <!-- Top bar: back button — title — controls -->
+                <div class="pockit-topbar">
+                    <button class="back-link" data-nav-link data-target-page="projects">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        <span data-i18n="pockit-back">Projects</span>
+                    </button>
+                    <span class="project-nav-title">Pockit</span>
+                    <div class="pockit-topbar-controls">
+                        <button class="control-btn" id="theme-toggle-cs" title="Switch theme">
+                            <ion-icon name="sunny-outline"></ion-icon>
+                        </button>
+                        <button class="control-btn" id="lang-toggle-cs" title="Change language">
+                            <img src="components/images/br_flag.png" alt="PT" class="flag-icon">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ══════════ HERO ══════════ -->
+                <section class="project-hero">
+                    <div class="project-hero-inner">
+
+                        <!-- Logo row -->
+                        <div class="pockit-logo-row">
+                            <div class="pockit-logo-left">
+                                <svg class="pockit-logo-icon" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 2L4 11V26C4 37.5 13 47.5 24 50C35 47.5 44 37.5 44 26V11L24 2Z" fill="rgba(29,123,255,0.25)" stroke="white" stroke-width="2"/>
+                                    <path d="M15 26.5L21 32.5L33 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="pockit-wordmark">Pockit</span>
+                            </div>
+                            <div class="pockit-by">
+                                <span class="pockit-by-label" data-i18n="pockit-by-label">By</span>
+                                <span class="pockit-by-name">
+                                    <img src="components/images/eu.png" alt="Pedro Zorzenon" class="pockit-by-avatar">
+                                    Pedro Zorzenon
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="project-tags">
+                            <span class="project-tag">UX Research</span>
+                            <span class="project-tag">UI Design</span>
+                            <span class="project-tag">Fintech</span>
+                            <span class="project-tag">Mobile App</span>
+                            <span class="project-tag">Design System</span>
+                        </div>
+
+                        <!-- Problem / Solution -->
+                        <div class="hero-ps">
+                            <div>
+                                <div class="ps-label problem">
+                                    <div class="ps-bar problem"></div>
+                                    <span data-i18n="pockit-problem-label">PROBLEM</span>
+                                </div>
+                                <p class="ps-text" data-i18n="pockit-problem-text">Many people face difficulties in investing and saving money due to the complexity of existing financial apps. Financial management options are often not intuitive and are not tailored to different age groups or levels of financial knowledge.</p>
+                                <ul class="ps-list">
+                                    <li><div class="ps-icon minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="pockit-problem-item1">Difficulties in investing and saving</span></li>
+                                    <li><div class="ps-icon minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="pockit-problem-item2">Complexity of financial apps</span></li>
+                                    <li><div class="ps-icon minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="pockit-problem-item3">Lack of Incentives</span></li>
+                                    <li><div class="ps-icon minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="pockit-problem-item4">Lack of Financial Overview</span></li>
+                                    <li><div class="ps-icon minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="pockit-problem-item5">Digital Security concerns</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="ps-label solution">
+                                    <div class="ps-bar solution"></div>
+                                    <span data-i18n="pockit-solution-label">SOLUTION</span>
+                                </div>
+                                <p class="ps-text" data-i18n="pockit-solution-text">Pockit enables and encourages users to save and invest their money mindfully and easily. The main goal is to provide a simple and intuitive experience for people of all ages, democratizing access to financial tools in an inclusive way.</p>
+                                <ul class="ps-list">
+                                    <li><div class="ps-icon check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="pockit-solution-item1">Simple and Personalized Tutorials</span></li>
+                                    <li><div class="ps-icon check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="pockit-solution-item2">Gamification: Incentivizing financial goals</span></li>
+                                    <li><div class="ps-icon check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="pockit-solution-item3">Focus on Security</span></li>
+                                    <li><div class="ps-icon check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="pockit-solution-item4">Comprehensive Dashboard</span></li>
+                                    <li><div class="ps-icon check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="pockit-solution-item5">Financial Education</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- App screens -->
+                        <div class="hero-screens">
+                            <img src="components/images/pockit/screens.png" alt="Pockit app screens"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none; min-height:280px;">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                                <span>Export Figma frame (node 4:163) → components/images/pockit/screens.png</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Stats Banner -->
+                <div style="padding:0 20px;">
+                    <div class="stats-banner">
+                        <div class="stats-banner-item"><div class="stats-banner-num">10</div><div class="stats-banner-label" data-i18n="pockit-stat1-label">Users Interviewed</div></div>
+                        <div class="stats-banner-item"><div class="stats-banner-num">85%</div><div class="stats-banner-label" data-i18n="pockit-stat2-label">Prefer Simple UI</div></div>
+                        <div class="stats-banner-item"><div class="stats-banner-num">93.5%</div><div class="stats-banner-label" data-i18n="pockit-stat3-label">Task Success Rate</div></div>
+                        <div class="stats-banner-item"><div class="stats-banner-num">4</div><div class="stats-banner-label" data-i18n="pockit-stat4-label">Competitors Analyzed</div></div>
+                    </div>
+                </div>
+
+                <!-- ══════════ CASE STUDY CONTENT ══════════ -->
+                <div class="case-study-wrapper">
+
+                    <!-- ━━━━━━━━ DISCOVER ━━━━━━━━ -->
+                    <div class="phase-header phase-discover"><h2 data-i18n="pockit-phase-discover">DISCOVER</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-desk-title">Desk Research</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-desk-desc">During the development of Pockit, several issues faced by users in managing their finances were identified:</p>
+                        <div class="cs-card"><div class="cs-card-title" data-i18n="pockit-desk1-title">1 — Low Financial Literacy</div><p class="cs-card-text" data-i18n="pockit-desk1-text">Many people do not know how or where to start investing. According to the OECD, only 26% of Brazilians have basic knowledge of finance. This highlights the need for tools that educate users while providing practical solutions.</p><p class="cs-card-source" data-i18n="pockit-desk1-source">Source: OECD — Financial Literacy Report</p></div>
+                        <div class="cs-card"><div class="cs-card-title" data-i18n="pockit-desk2-title">2 — Lack of Personalization</div><p class="cs-card-text" data-i18n="pockit-desk2-text">Many apps do not allow users to adjust the system to their specific goals. According to McKinsey, 71% of consumers expect personalized interactions in their digital experiences, but many financial apps fail to deliver this.</p><p class="cs-card-source" data-i18n="pockit-desk2-source">Source: McKinsey — The value of getting personalization right</p></div>
+                        <div class="cs-card"><div class="cs-card-title" data-i18n="pockit-desk3-title">3 — Complex Interfaces</div><p class="cs-card-text" data-i18n="pockit-desk3-text">An overload of information or steps confuses new users. A study by the Nielsen Norman Group indicates that 58% of users abandon apps because they find them complicated to navigate.</p><p class="cs-card-source" data-i18n="pockit-desk3-source">Source: NNGroup — Mobile Usability Report</p></div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-bench-title">Benchmarks</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-bench-desc">Benchmark analysis was essential in identifying gaps in the market, understanding what already works, and avoiding common mistakes made by other financial apps.</p>
+                        <div class="benchmark-legend">
+                            <div class="legend-item"><div class="legend-dot dot-has"></div><span data-i18n="pockit-bench-has"> Has</span></div>
+                            <div class="legend-item"><div class="legend-dot dot-partial"></div><span data-i18n="pockit-bench-partial"> Has, but poorly applied</span></div>
+                            <div class="legend-item"><div class="legend-dot dot-none"></div><span data-i18n="pockit-bench-none"> Does not have</span></div>
+                        </div>
+                        <div class="benchmark-table-wrap">
+                            <table class="benchmark-table">
+                                <thead><tr><th>App</th><th data-i18n="pockit-bench-th-simple">Simple interface</th><th data-i18n="pockit-bench-th-personal">Personalization</th><th data-i18n="pockit-bench-th-edu">Financial education</th><th data-i18n="pockit-bench-th-chat">Chat</th><th data-i18n="pockit-bench-th-gamif">Gamification</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Nubank</td><td><div class="dot-cell dot-has"></div></td><td><div class="dot-cell dot-partial"></div></td><td><div class="dot-cell dot-partial"></div></td><td><div class="dot-cell dot-has"></div></td><td><div class="dot-cell dot-none"></div></td></tr>
+                                    <tr><td>Wise</td><td><div class="dot-cell dot-has"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td></tr>
+                                    <tr><td>Inter</td><td><div class="dot-cell dot-has"></div></td><td><div class="dot-cell dot-partial"></div></td><td><div class="dot-cell dot-has"></div></td><td><div class="dot-cell dot-partial"></div></td><td><div class="dot-cell dot-none"></div></td></tr>
+                                    <tr><td>BTG Pactual</td><td><div class="dot-cell dot-partial"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td><td><div class="dot-cell dot-none"></div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-research-title">User Research</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-research-desc">To better understand the needs and difficulties of users, the following questions were created for in-depth interviews:</p>
+                        <div class="cs-card numbered"><div class="cs-num">1</div><div class="cs-card-text" data-i18n="pockit-q1">What are the biggest challenges you face when trying to save or invest money?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">2</div><div class="cs-card-text" data-i18n="pockit-q2">Have you ever used a financial app? What did you think of the experience?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">3</div><div class="cs-card-text" data-i18n="pockit-q3">What features would you like to see in a financial management app?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">4</div><div class="cs-card-text" data-i18n="pockit-q4">What motivates you to save or invest?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">5</div><div class="cs-card-text" data-i18n="pockit-q5">Is there any feature that you find confusing or complicated in current financial apps?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">6</div><div class="cs-card-text" data-i18n="pockit-q6">What is your biggest concern when using technology to manage your finances?</div></div>
+                        <div class="cs-card numbered"><div class="cs-num">7</div><div class="cs-card-text" data-i18n="pockit-q7">Do you prefer a more minimalist or detailed design in financial apps? Why?</div></div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-results-title">Interview Results</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-results-desc">After interviewing 10 participants from different age groups and income levels, the following insights were obtained:</p>
+                        <div class="stat-grid">
+                            <div class="stat-card"><div class="stat-num">80%</div><div class="stat-label-b" data-i18n="pockit-stat-challenges-b">Common Challenges</div><div class="stat-label-t" data-i18n="pockit-stat-challenges-t">Reported difficulties in understanding how investments work. Another 60% had issues maintaining saving consistency.</div></div>
+                            <div class="stat-card"><div class="stat-num">70%</div><div class="stat-label-b" data-i18n="pockit-stat-expect-b">Expectations</div><div class="stat-label-t" data-i18n="pockit-stat-expect-t">Expect the app to provide a consolidated view of their finances and goals in one place.</div></div>
+                            <div class="stat-card"><div class="stat-num">85%</div><div class="stat-label-b" data-i18n="pockit-stat-design-b">Design Preferences</div><div class="stat-label-t" data-i18n="pockit-stat-design-t">Prefer simple and intuitive interfaces. Visual graphs were highlighted as essential.</div></div>
+                            <div class="stat-card"><div class="stat-num">50%</div><div class="stat-label-b" data-i18n="pockit-stat-fears-b">Fears and Doubts</div><div class="stat-label-t" data-i18n="pockit-stat-fears-t">Are concerned about security of their financial data. Another 40% fear making mistakes.</div></div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DEFINE ━━━━━━━━ -->
+                    <div class="phase-header phase-define"><h2 data-i18n="pockit-phase-define">DEFINE</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-personas-title">Personas</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-personas-desc">To represent the main types of users of Pockit, two personas were created based on the research data:</p>
+                        <div class="cs-grid-2">
+                            <div class="persona-card">
+                                <div class="persona-header">
+                                    <div><div class="persona-name">ANA SILVA</div><div class="persona-occ-label" data-i18n="pockit-occ-label">Occupation</div><div class="persona-occ-title" data-i18n="pockit-ana-occ">Elementary School Teacher</div></div>
+                                </div>
+                                <div class="persona-body">
+                                    <div class="persona-info">
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-age-label">Age</span><span class="pi-value">35</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-edu-label">Education</span><span class="pi-value" data-i18n="pockit-ana-edu">Bachelor's in Education</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-status-label">Status</span><span class="pi-value" data-i18n="pockit-ana-status">Married</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-loc-label">Location</span><span class="pi-value">Belo Horizonte, MG</span></div>
+                                    </div>
+                                    <div class="persona-h" data-i18n="pockit-bg-h">Background</div>
+                                    <p class="persona-p" data-i18n="pockit-ana-bg">Ana has always been organized with her finances but misses tools that help her better plan for her family's future.</p>
+                                    <div class="persona-h" data-i18n="pockit-goals-h">Goals and Frustrations</div>
+                                    <p class="persona-p" data-i18n="pockit-ana-goals">She wants to save for her children's education but finds existing apps too complicated.</p>
+                                    <div class="persona-h" data-i18n="pockit-pains-h">Pains and Desires</div>
+                                    <p class="persona-p" data-i18n="pockit-ana-pains">She wants an easy-to-use app that offers practical suggestions for daily life.</p>
+                                </div>
+                            </div>
+                            <div class="persona-card">
+                                <div class="persona-header">
+                                    <div><div class="persona-name">CARLOS CAMPOS</div><div class="persona-occ-label" data-i18n="pockit-occ-label">Occupation</div><div class="persona-occ-title" data-i18n="pockit-carlos-occ">Freelance Graphic Designer</div></div>
+                                </div>
+                                <div class="persona-body">
+                                    <div class="persona-info">
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-age-label">Age</span><span class="pi-value">28</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-edu-label">Education</span><span class="pi-value" data-i18n="pockit-carlos-edu">Technical Degree in Design</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-status-label">Status</span><span class="pi-value" data-i18n="pockit-carlos-status">Single</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-loc-label">Location</span><span class="pi-value">São Paulo, SP</span></div>
+                                    </div>
+                                    <div class="persona-h" data-i18n="pockit-bg-h">Background</div>
+                                    <p class="persona-p" data-i18n="pockit-carlos-bg">Carlos works independently and struggles to save due to variable income. He seeks tools to help him organize his finances.</p>
+                                    <div class="persona-h" data-i18n="pockit-goals-h">Goals and Frustrations</div>
+                                    <p class="persona-p" data-i18n="pockit-carlos-goals">He wants to create an emergency fund but lacks motivation to start.</p>
+                                    <div class="persona-h" data-i18n="pockit-pains-h">Pains and Desires</div>
+                                    <p class="persona-p" data-i18n="pockit-carlos-pains">He desires gamified features that make the saving process more engaging.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-insights-title">Research Insights</h3>
+                        <div class="cs-grid-3">
+                            <div class="cs-card"><div class="cs-card-title" style="color:#10865b;" data-i18n="pockit-certain-title">✓ Certainties</div><ul class="bullet-list" style="margin-top:12px;"><li><div class="b-dot" style="background:#10865b;"></div><span data-i18n="pockit-certain1">Users seek easy solutions to save money.</span></li><li><div class="b-dot" style="background:#10865b;"></div><span data-i18n="pockit-certain2">Simple interfaces increase adoption.</span></li><li><div class="b-dot" style="background:#10865b;"></div><span data-i18n="pockit-certain3">Personalization enhances engagement.</span></li></ul></div>
+                            <div class="cs-card"><div class="cs-card-title" style="color:#f0a500;" data-i18n="pockit-assume-title">~ Assumptions</div><ul class="bullet-list" style="margin-top:12px;"><li><div class="b-dot" style="background:#f0a500;"></div><span data-i18n="pockit-assume1">Users of all ages can use the app.</span></li><li><div class="b-dot" style="background:#f0a500;"></div><span data-i18n="pockit-assume2">Visual graphs promote understanding.</span></li><li><div class="b-dot" style="background:#f0a500;"></div><span data-i18n="pockit-assume3">Gamification creates healthy habits.</span></li></ul></div>
+                            <div class="cs-card"><div class="cs-card-title" style="color:#1d7bff;" data-i18n="pockit-questions-title">? Questions</div><ul class="bullet-list" style="margin-top:12px;"><li><div class="b-dot"></div><span data-i18n="pockit-question1">Best way to explain complex financial concepts?</span></li><li><div class="b-dot"></div><span data-i18n="pockit-question2">Is there resistance from older users?</span></li><li><div class="b-dot"></div><span data-i18n="pockit-question3">How to balance simplicity with advanced features?</span></li></ul></div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DEVELOP ━━━━━━━━ -->
+                    <div class="phase-header phase-develop"><h2 data-i18n="pockit-phase-develop">DEVELOP</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-draft-title">Draft</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-draft-desc">At this moment, the computer was set aside and all ideas were put on paper. Hand-drawn sketches were created without worrying about details — allowing visualization of the 'Big Picture' of the product before moving into digital tools.</p>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-ideation-title">Ideation</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-ideation-desc">The ideation process included brainstorming focused on the following points:</p>
+                        <ul class="bullet-list">
+                            <li><div class="b-dot"></div><span data-i18n="pockit-ideation1">Simplifying access to financial information.</span></li>
+                            <li><div class="b-dot"></div><span data-i18n="pockit-ideation2">Creating an emotionally positive experience by associating saving money with personal progress.</span></li>
+                            <li><div class="b-dot"></div><span data-i18n="pockit-ideation3">Ensuring accessibility for people with different levels of technological skills.</span></li>
+                        </ul>
+                        <p class="cs-section-desc" style="margin-top:16px;margin-bottom:0;"><strong style="color:var(--white2);" data-i18n="pockit-tools-bold">Tools used:</strong><span data-i18n="pockit-tools-text"> FigJam, Notion, and qualitative research with potential users.</span></p>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-wireframes-title">Wireframes</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-wireframes-desc">After gathering all necessary information, low-fidelity screens were created to begin usability research with potential real users.</p>
+                        <div class="cs-image">
+                            <img src="components/images/pockit/wireframes.png" alt="Pockit wireframes"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none;">
+                                <ion-icon name="grid-outline"></ion-icon>
+                                <span>Export Figma frame (node 4:517) → components/images/pockit/wireframes.png</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-usability-title">Usability Tests</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-usability-desc">Real-life scenario tests were planned to evaluate the effectiveness of the design and user understanding.</p>
+                        <div class="scenario-item"><strong data-i18n="pockit-scenario1-title">1 — Registration and Box Setup:</strong><span data-i18n="pockit-scenario1-desc"> Assess whether users can create boxes for their goals without difficulties.</span></div>
+                        <div class="scenario-item"><strong data-i18n="pockit-scenario2-title">2 — Adding Funds:</strong><span data-i18n="pockit-scenario2-desc"> Test the clarity of transfer and investment options.</span></div>
+                        <div class="scenario-item"><strong data-i18n="pockit-scenario3-title">3 — Goal Tracking:</strong><span data-i18n="pockit-scenario3-desc"> Check if the graphs and indicators help users monitor their progress.</span></div>
+                        <div class="scenario-item"><strong data-i18n="pockit-scenario4-title">4 — Portfolio Exploration:</strong><span data-i18n="pockit-scenario4-desc"> Explore the "Portfolio" screen to understand total assets divided among created boxes and applied investments.</span></div>
+                        <div class="result-card">
+                            <div class="result-card-title" data-i18n="pockit-result-title">✓ Results Obtained</div>
+                            <p class="result-card-text"><span data-i18n="pockit-result-text">Users of different ages completed the tasks easily and reported understanding of the system. </span><strong style="color:var(--white2);" data-i18n="pockit-result-bold">Average Task Success Rate: 93.5%</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-identity-title">Visual Identity</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-identity-desc">The visual identity of Pockit was designed to convey three core values:</p>
+                        <div class="cs-grid-3" style="margin-bottom:32px;">
+                            <div class="cs-card" style="text-align:center;"><div style="font-size:26px;margin-bottom:10px;">🔵</div><div class="cs-card-title" data-i18n="pockit-trust-title">Trust</div><p class="cs-card-text" data-i18n="pockit-trust-text">Use of blue and gray tones that convey stability and professionalism.</p></div>
+                            <div class="cs-card" style="text-align:center;"><div style="font-size:26px;margin-bottom:10px;">✦</div><div class="cs-card-title" data-i18n="pockit-simplicity-title">Simplicity</div><p class="cs-card-text" data-i18n="pockit-simplicity-text">Modern and minimalist typography focused on readability at all sizes.</p></div>
+                            <div class="cs-card" style="text-align:center;"><div style="font-size:26px;margin-bottom:10px;">◎</div><div class="cs-card-title" data-i18n="pockit-access-title">Accessibility</div><p class="cs-card-text" data-i18n="pockit-access-text">Adequate contrast and responsive design for different devices and users.</p></div>
+                        </div>
+                        <div class="color-group">
+                            <div class="color-group-title" data-i18n="pockit-color-primary">Primary — Blues</div>
+                            <div class="color-swatches">
+                                <div class="color-swatch"><div class="swatch-box" style="background:#d9e9ff;"></div><div class="swatch-label">#d9e9ff</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#8ebdff;"></div><div class="swatch-label">#8ebdff</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#4291ff;"></div><div class="swatch-label">#4291ff</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#1d7bff; outline:2px solid #fff; outline-offset:2px;"></div><div class="swatch-label" style="font-weight:700;color:var(--white2);">Main</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#0057d1;"></div><div class="swatch-label">#0057d1</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#003888;"></div><div class="swatch-label">#003888</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#002963;"></div><div class="swatch-label">#002963</div></div>
+                            </div>
+                        </div>
+                        <div class="color-group">
+                            <div class="color-group-title" data-i18n="pockit-color-secondary">Secondary — Navy</div>
+                            <div class="color-swatches">
+                                <div class="color-swatch"><div class="swatch-box" style="background:#e1e3f1;"></div><div class="swatch-label">#e1e3f1</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#8891c5;"></div><div class="swatch-label">#8891c5</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#505ca5; outline:2px solid #fff; outline-offset:2px;"></div><div class="swatch-label" style="font-weight:700;color:var(--white2);">Main</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#414c87;"></div><div class="swatch-label">#414c87</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#2a3157;"></div><div class="swatch-label">#2a3157</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#191d34;"></div><div class="swatch-label">#191d34</div></div>
+                            </div>
+                        </div>
+                        <div class="color-group">
+                            <div class="color-group-title" data-i18n="pockit-color-status">Status Colors</div>
+                            <div class="color-swatches">
+                                <div class="color-swatch"><div class="swatch-box" style="background:#10865b;"></div><div class="swatch-label">Success</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#feb655;"></div><div class="swatch-label">Warning</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#ff1236;"></div><div class="swatch-label">Error</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#ffffff; border-color:var(--jet);"></div><div class="swatch-label">White</div></div>
+                                <div class="color-swatch"><div class="swatch-box" style="background:#0a0a0b;"></div><div class="swatch-label">Black</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DELIVER ━━━━━━━━ -->
+                    <div class="phase-header phase-deliver"><h2 data-i18n="pockit-phase-deliver">DELIVER</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title" data-i18n="pockit-hifi-title">High-Fidelity Prototype</h3>
+                        <p class="cs-section-desc" data-i18n="pockit-hifi-desc">Based on the wireframes and the visual identity, the high-fidelity prototype was created to represent the final user experience — from onboarding and box creation to portfolio tracking and investment exploration.</p>
+                        <div class="cs-image">
+                            <img src="components/images/pockit/prototype.png" alt="Pockit high-fidelity prototype screens"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none; min-height:320px;">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                                <span>Export Figma frame (node 4:163) → components/images/pockit/prototype.png</span>
+                            </div>
+                        </div>
+                        <div class="prototype-cta">
+                            <div class="prototype-cta-title" data-i18n="pockit-cta-title">Explore the interactive prototype</div>
+                            <p class="prototype-cta-text" data-i18n="pockit-cta-text">Navigate the full Pockit experience — from account creation to tracking financial goals.</p>
+                            <a href="https://www.figma.com/proto/C846tEphfhZ96dlAIalcC1/Pockit?node-id=402-2558&viewport=1830%2C577%2C0.38&t=rD0a18ebR22IljD4-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=423%3A124&page-id=402%3A543" target="_blank" rel="noopener" class="prototype-btn">
+                                <ion-icon name="play-circle-outline"></ion-icon>
+                                <span data-i18n="pockit-cta-btn">View in Figma</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div><!-- /case-study-wrapper -->
+
+            </article>
+
+            <!-- ══════════════════════════════════
+                 HOURGLASS CASE STUDY
+                 ══════════════════════════════════ -->
+            <article class="hourglass" data-page="hourglass">
+
+                <!-- Top bar -->
+                <div class="hg-topbar">
+                    <button class="back-link" data-nav-link data-target-page="projects">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        <span data-i18n="hg-back">Projects</span>
+                    </button>
+                    <span class="project-nav-title">HourGlass</span>
+                    <div class="hg-topbar-controls">
+                        <button class="control-btn" id="theme-toggle-hg" title="Switch theme">
+                            <ion-icon name="sunny-outline"></ion-icon>
+                        </button>
+                        <button class="control-btn" id="lang-toggle-hg" title="Change language">
+                            <img src="components/images/br_flag.png" alt="PT" class="flag-icon">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ══════════ HERO ══════════ -->
+                <section class="project-hero hg-hero">
+                    <div class="project-hero-inner">
+
+                        <div class="pockit-logo-row">
+                            <div class="pockit-logo-left">
+                                <svg class="pockit-logo-icon" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="4" width="32" height="12" rx="4" fill="rgba(245,166,35,0.2)" stroke="#f5a623" stroke-width="2"/>
+                                    <rect x="8" y="36" width="32" height="12" rx="4" fill="rgba(245,166,35,0.2)" stroke="#f5a623" stroke-width="2"/>
+                                    <path d="M12 16 C12 28 36 24 36 36" stroke="#f5a623" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M36 16 C36 28 12 24 12 36" stroke="rgba(245,166,35,0.45)" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span class="pockit-wordmark">HourGlass</span>
+                            </div>
+                            <div class="pockit-by">
+                                <span class="pockit-by-label" data-i18n="hg-by-label">By</span>
+                                <span class="pockit-by-name">
+                                    <img src="components/images/eu.png" alt="Pedro Zorzenon" class="pockit-by-avatar">
+                                    Pedro Zorzenon
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="project-tag hg-tag">UX Research</span>
+                            <span class="project-tag hg-tag">UI Design</span>
+                            <span class="project-tag hg-tag">B2B</span>
+                            <span class="project-tag hg-tag">Mobile App</span>
+                            <span class="project-tag hg-tag">SaaS</span>
+                        </div>
+
+                        <div class="hero-ps">
+                            <div>
+                                <div class="ps-label problem">
+                                    <div class="ps-bar hg-bar-problem"></div>
+                                    <span data-i18n="hg-problem-label">PROBLEM</span>
+                                </div>
+                                <p class="ps-text" data-i18n="hg-problem-text">Companies face many challenges when managing schedules, overtime, responsibilities and communication between employees. The lack of a centralized tool leads to confusion and loss of productivity.</p>
+                                <ul class="ps-list">
+                                    <li><div class="ps-icon hg-minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="hg-problem-item1">Lack of clarity in communication</span></li>
+                                    <li><div class="ps-icon hg-minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="hg-problem-item2">Difficulty managing schedules</span></li>
+                                    <li><div class="ps-icon hg-minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="hg-problem-item3">Inefficient management of incidents</span></li>
+                                    <li><div class="ps-icon hg-minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="hg-problem-item4">Difficulty tracking multiple tasks</span></li>
+                                    <li><div class="ps-icon hg-minus"><svg viewBox="0 0 12 12"><line x1="2" y1="6" x2="10" y2="6"/></svg></div><span data-i18n="hg-problem-item5">Disorganization within teams</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="ps-label solution">
+                                    <div class="ps-bar hg-bar-solution"></div>
+                                    <span data-i18n="hg-solution-label">SOLUTION</span>
+                                </div>
+                                <p class="ps-text" data-i18n="hg-solution-text">HourGlass is an application designed to organize companies, centralizing responsibilities, events, observations and employee management to optimize internal processes.</p>
+                                <ul class="ps-list">
+                                    <li><div class="ps-icon hg-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="hg-solution-item1">Efficient management of multiple employees</span></li>
+                                    <li><div class="ps-icon hg-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="hg-solution-item2">Automated time tracking and records</span></li>
+                                    <li><div class="ps-icon hg-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="hg-solution-item3">Smart management of events and notes</span></li>
+                                    <li><div class="ps-icon hg-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="hg-solution-item4">Notifications and alerts for teams</span></li>
+                                    <li><div class="ps-icon hg-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span data-i18n="hg-solution-item5">Simplified and accessible reports</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hero-screens">
+                            <img src="components/images/hourglass/screens.png" alt="HourGlass app screens"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none; min-height:280px;">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                                <span>Export Figma hero screens → components/images/hourglass/screens.png</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ══════════ CASE STUDY CONTENT ══════════ -->
+                <div class="case-study-wrapper">
+
+                    <!-- ━━━━━━━━ DISCOVER ━━━━━━━━ -->
+                    <div class="phase-header hg-phase-discover"><h2 data-i18n="hg-phase-discover">DISCOVER</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-research-title">Data Search</h3>
+                        <p class="cs-section-desc" data-i18n="hg-research-goal-label"><strong style="color:var(--white2);">Goal:</strong></p>
+                        <p class="cs-section-desc" style="margin-top:0;" data-i18n="hg-research-goal">Understand the needs and challenges faced by companies in relation to time management and internal communication.</p>
+
+                        <div class="cs-grid-2" style="margin-top:24px;">
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-methodologies-title">Methodologies</div>
+                                <ul class="bullet-list" style="margin-top:12px;">
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-method1-b">Interviews with Managers and Employees:</strong> <span data-i18n="hg-method1-t"> Qualitative interviews to understand real operational problems and needs.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-method2-b">Questionnaires:</strong><span data-i18n="hg-method2-t"> Distribution of quantitative questionnaires to collect data on the frequency and impact of the identified problems.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-method3-b">Benchmarking:</strong><span data-i18n="hg-method3-t"> Study of other solutions available on the market to identify strengths and weaknesses.</span></span></li>
+                                </ul>
+                            </div>
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-results-title">Results</div>
+                                <ul class="bullet-list" style="margin-top:12px;">
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-result1-b">Main Pain Points:</strong><span data-i18n="hg-result1-t"> Lack of clarity in communication, difficulty managing schedules and overtime, and confusion about observations and complaints.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-result2-b">Priority Needs:</strong><span data-i18n="hg-result2-t"> A centralized, easy-to-use tool that allows clear communication, accurate records and management of schedules and roles.</span></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DEFINE ━━━━━━━━ -->
+                    <div class="phase-header hg-phase-define"><h2 data-i18n="hg-phase-define">DEFINE</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-persona-title">Persona</h3>
+                        <p class="cs-section-desc" data-i18n="hg-persona-desc">Based on research interviews, a primary persona was created to represent the main user archetype of HourGlass:</p>
+                        <div class="cs-grid-2">
+                            <div class="persona-card hg-persona-card">
+                                <div class="persona-header hg-persona-header">
+                                    <div>
+                                        <div class="persona-name">CARLA MENDES</div>
+                                        <div class="persona-occ-label" data-i18n="pockit-occ-label">Occupation</div>
+                                        <div class="persona-occ-title" data-i18n="hg-persona-occ">Operations Manager</div>
+                                    </div>
+                                </div>
+                                <div class="persona-body">
+                                    <div class="persona-info">
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-age-label">Age</span><span class="pi-value">34</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-edu-label">Education</span><span class="pi-value" data-i18n="hg-persona-edu">Business Administration</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-status-label">Status</span><span class="pi-value" data-i18n="hg-persona-status">Married</span></div>
+                                        <div class="persona-info-item"><span class="pi-label" data-i18n="pockit-loc-label">Location</span><span class="pi-value">São Paulo, SP</span></div>
+                                    </div>
+                                    <div class="persona-h" data-i18n="pockit-bg-h">Background</div>
+                                    <p class="persona-p" data-i18n="hg-persona-bg">Carla manages a team of 20+ employees across multiple shifts. She struggles with spreadsheets and messaging apps to track attendance, overtime and internal complaints — constantly losing information and wasting time.</p>
+                                    <div class="persona-h" data-i18n="pockit-goals-h">Goals and Frustrations</div>
+                                    <p class="persona-p" data-i18n="hg-persona-goals">She wants a single platform where she can visualize schedules, manage complaints and track employee performance without switching between tools.</p>
+                                    <div class="persona-h" data-i18n="pockit-pains-h">Pains and Desires</div>
+                                    <p class="persona-p" data-i18n="hg-persona-pains">She desires clear automated notifications and a dashboard that gives her a complete overview of her team in real time.</p>
+                                </div>
+                            </div>
+                            <div class="cs-card hg-insights-card">
+                                <div class="cs-card-title hg-card-title" style="margin-bottom:16px;" data-i18n="hg-insights-title">Key Insights</div>
+                                <ul class="bullet-list">
+                                    <li><div class="b-dot hg-dot"></div><span data-i18n="hg-insight1">Managers lose 2+ hours/day managing information across disconnected tools.</span></li>
+                                    <li><div class="b-dot hg-dot"></div><span data-i18n="hg-insight2">Employees miss important updates due to lack of centralized notifications.</span></li>
+                                    <li><div class="b-dot hg-dot"></div><span data-i18n="hg-insight3">Overtime tracking is done manually, causing disputes and errors.</span></li>
+                                    <li><div class="b-dot hg-dot"></div><span data-i18n="hg-insight4">Internal complaints lack a formal channel, creating friction and distrust.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DEVELOP ━━━━━━━━ -->
+                    <div class="phase-header hg-phase-develop"><h2 data-i18n="hg-phase-develop">DEVELOP</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-ideation-title">Ideation</h3>
+                        <div class="cs-grid-2" style="margin-bottom:24px;">
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-brainstorm-title">Brainstorming</div>
+                                <ul class="bullet-list" style="margin-top:12px;">
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-feature-title">Main Features:</strong><span data-i18n="hg-feature-text"> Recording points, managing overtime, sending and tracking complaints and observations, assigning responsibilities and roles, internal chat.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-design-title">Intuitive Design:</strong><span data-i18n="hg-design-text"> User-friendly and easy-to-navigate interface.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-notif-title">Notifications and Alerts:</strong><span data-i18n="hg-notif-text"> To remind employees of important tasks and deadlines.</span></span></li>
+                                </ul>
+                            </div>
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-sketches-title">Initial Sketches</div>
+                                <p class="cs-card-text" style="margin-top:10px;" data-i18n="hg-sketches-text">Design of basic ideas of how each functionality will be presented in the app — before moving into digital wireframing tools.</p>
+                                <div class="cs-image" style="margin-top:16px;margin-bottom:0;">
+                                    <img src="components/images/hourglass/sketches.png" alt="HourGlass initial sketches"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                    <div class="img-placeholder" style="display:none; min-height:140px;">
+                                        <ion-icon name="pencil-outline"></ion-icon>
+                                        <span>Export sketches → components/images/hourglass/sketches.png</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-wireframes-title">Wireframes</h3>
+                        <p class="cs-section-desc" data-i18n="hg-wireframes-goal">Create a basic structure of the application to visualize the arrangement of elements and navigation flows.</p>
+                        <div class="hg-screens-grid">
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="log-in-outline"></ion-icon>
+                                    <span>Login</span>
+                                </div>
+                            </div>
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                    <span data-i18n="hg-screen-config">Configurações</span>
+                                </div>
+                            </div>
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                                    <span data-i18n="hg-screen-msg">Mensagens</span>
+                                </div>
+                            </div>
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="home-outline"></ion-icon>
+                                    <span>Home</span>
+                                </div>
+                            </div>
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="list-outline"></ion-icon>
+                                    <span data-i18n="hg-screen-activities">Atividades</span>
+                                </div>
+                            </div>
+                            <div class="hg-screen-item">
+                                <div class="img-placeholder" style="min-height:160px;">
+                                    <ion-icon name="time-outline"></ion-icon>
+                                    <span data-i18n="hg-screen-points">Pontos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cs-image" style="margin-top:20px;">
+                            <img src="components/images/hourglass/wireframes.png" alt="HourGlass wireframes"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none;">
+                                <ion-icon name="grid-outline"></ion-icon>
+                                <span>Export wireframes → components/images/hourglass/wireframes.png</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-usability-title">Usability Testing</h3>
+                        <p class="cs-section-desc" data-i18n="hg-usability-goal">Ensure that the app is easy to use and meets users' needs.</p>
+                        <div class="cs-grid-2">
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-methodologies-title">Methodologies</div>
+                                <ul class="bullet-list" style="margin-top:12px;">
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-test-method1-b">Testing with Real Users:</strong><span data-i18n="hg-test-method1-t"> Select a group of managers and employees to test the app.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-test-method2-b">Iterative Feedback:</strong><span data-i18n="hg-test-method2-t"> Collect feedback on usability and identify areas for improvement.</span></span></li>
+                                    <li><div class="b-dot hg-dot"></div><span><strong style="color:var(--white2);" data-i18n="hg-test-method3-b">Adjustments:</strong><span data-i18n="hg-test-method3-t"> Make adjustments based on feedback received.</span></span></li>
+                                </ul>
+                            </div>
+                            <div class="cs-card">
+                                <div class="cs-card-title hg-card-title" data-i18n="hg-results-title">Results</div>
+                                <ul class="bullet-list" style="margin-top:12px;">
+                                    <li><div class="b-dot hg-dot" style="background:#10865b;"></div><span><strong style="color:var(--white2);" data-i18n="hg-test-result1-b">Positive Feedback:</strong><span data-i18n="hg-test-result1-t"> Users found the interface intuitive and easy to use.</span></span></li>
+                                    <li><div class="b-dot hg-dot" style="background:#f0a500;"></div><span><strong style="color:var(--white2);" data-i18n="hg-test-result2-b">Areas of Improvement:</strong><span data-i18n="hg-test-result2-t"> Adjustments in information organization and clarity of notifications.</span></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ━━━━━━━━ DELIVER ━━━━━━━━ -->
+                    <div class="phase-header hg-phase-deliver"><h2 data-i18n="hg-phase-deliver">DELIVER</h2></div>
+
+                    <div class="cs-section">
+                        <h3 class="cs-section-title hg-title" data-i18n="hg-prototype-title">Prototype</h3>
+                        <p class="cs-section-desc" data-i18n="hg-prototype-goal">Create a working prototype to visualize and test the full flow of the app — from login and point recording to complaint management and team overview.</p>
+                        <div class="cs-image">
+                            <img src="components/images/hourglass/prototype.png" alt="HourGlass prototype screens"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="img-placeholder" style="display:none; min-height:320px;">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                                <span>Export prototype → components/images/hourglass/prototype.png</span>
+                            </div>
+                        </div>
+                        <div class="prototype-cta hg-cta">
+                            <div class="prototype-cta-title" data-i18n="hg-cta-title">Explore the full case study</div>
+                            <p class="prototype-cta-text" data-i18n="hg-cta-text">See the complete HourGlass case study on Dribbble — including all screens, flows and final prototype.</p>
+                            <a href="https://dribbble.com/shots/24561262-HourGlass-Project-UX-UI-Case-Study" target="_blank" rel="noopener" class="prototype-btn hg-btn">
+                                <ion-icon name="play-circle-outline"></ion-icon>
+                                <span data-i18n="hg-cta-btn">View on Dribbble</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div><!-- /case-study-wrapper -->
+
+            </article>
+
         </div>
     </main>
 
