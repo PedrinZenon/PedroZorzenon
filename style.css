@@ -1072,9 +1072,11 @@ article { display: none; }
         transition: var(--transition1);
     }
 
-        .project-item > a:hover img { transform: scale(1.1); }
+        .project-item > a:hover img,
+        .project-item > button:hover img { transform: scale(1.1); }
 
-        .project-item > a:hover .project-img::before { background: var(--overlay-hover); }
+        .project-item > a:hover .project-img::before,
+        .project-item > button:hover .project-img::before { background: var(--overlay-hover); }
 
 .project-item-icon-box {
     --scale: .8;
@@ -1094,7 +1096,8 @@ article { display: none; }
     transition: var(--transition1);
 }
 
-    .project-item > a:hover .project-item-icon-box {
+    .project-item > a:hover .project-item-icon-box,
+    .project-item > button:hover .project-item-icon-box {
         --scale: 1;
         opacity: 1;
     }
@@ -2048,18 +2051,22 @@ textarea.form-input {
 body:has(article[data-page="pockit"].active) .sidebar,
 body:has(article[data-page="pockit"].active) .navbar,
 body:has(article[data-page="hourglass"].active) .sidebar,
-body:has(article[data-page="hourglass"].active) .navbar {
+body:has(article[data-page="hourglass"].active) .navbar,
+body:has(article[data-page="itau"].active) .sidebar,
+body:has(article[data-page="itau"].active) .navbar {
     display: none !important;
 }
 
 body:has(article[data-page="pockit"].active) main,
-body:has(article[data-page="hourglass"].active) main {
+body:has(article[data-page="hourglass"].active) main,
+body:has(article[data-page="itau"].active) main {
     display: block !important;
     margin-bottom: 0 !important;
 }
 
 body:has(article[data-page="pockit"].active) .main-content,
-body:has(article[data-page="hourglass"].active) .main-content {
+body:has(article[data-page="hourglass"].active) .main-content,
+body:has(article[data-page="itau"].active) .main-content {
     width: 100% !important;
     min-width: 100% !important;
     margin: 0 !important;
@@ -2067,7 +2074,8 @@ body:has(article[data-page="hourglass"].active) .main-content {
 }
 
 article.pockit,
-article.hourglass {
+article.hourglass,
+article.itau {
     padding-bottom: 0;
     margin: 0;
 }
@@ -3073,3 +3081,148 @@ article.hourglass {
 [data-theme="light"] article.hourglass .pi-value { color: hsl(0,0%,10%); }
 [data-theme="light"] article.hourglass .persona-h { color: hsl(0,0%,8%); }
 [data-theme="light"] article.hourglass .persona-p { color: hsl(0,0%,30%); }
+
+/* =============================================
+   ITAÚ CASE STUDY
+   ============================================= */
+
+/* ── Itaú accent: orange #EC7000 ── */
+
+/* Topbar */
+.itau-topbar {
+    position: sticky;
+    top: 8px;
+    z-index: 200;
+    margin-bottom: 16px;
+    background: var(--eerie-black2);
+    border-bottom: 1px solid var(--jet);
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 56px;
+    box-shadow: 0 2px 12px hsla(0,0%,0%,.3);
+    transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+.itau-topbar.scrolled {
+    background: hsla(240, 2%, 12%, 0.45);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-bottom-color: hsla(28, 100%, 46%, 0.14);
+    box-shadow: 0 4px 24px hsla(0, 0%, 0%, 0.2);
+}
+
+.itau-topbar-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Hero — subtle orange undertone */
+.itau-hero {
+    background: var(--eerie-black2);
+    border: 1px solid var(--jet);
+    box-shadow: inset 0 -80px 100px -30px hsla(28, 100%, 46%, 0.07);
+}
+
+/* Tags */
+.project-tag.itau-tag {
+    background: rgba(236,112,0,.12);
+    border-color: rgba(236,112,0,.3);
+    color: #EC7000;
+}
+
+/* Problem / Solution bars */
+.ps-bar.itau-bar-problem { background: #c75c00; }
+.ps-bar.itau-bar-solution { background: #EC7000; }
+
+/* Problem/solution icons */
+.ps-icon.itau-minus { background: #c75c00; }
+.ps-icon.itau-check { background: #EC7000; }
+
+/* Section title underline — orange */
+.cs-section-title.itau-title {
+    border-bottom-color: #EC7000;
+}
+
+/* Card title accent */
+.cs-card-title.itau-card-title {
+    color: #EC7000;
+}
+
+/* Bullet dots */
+.b-dot.itau-dot { background: #EC7000; }
+
+/* Phase headers */
+.itau-phase-discover {
+    border-color: #EC7000;
+    background: linear-gradient(to right, transparent, hsla(28,100%,46%,.07), transparent);
+}
+.itau-phase-define {
+    border-color: #c75c00;
+    background: linear-gradient(to right, transparent, hsla(20,100%,39%,.07), transparent);
+}
+.itau-phase-develop {
+    border-color: #ffab40;
+    background: linear-gradient(to right, transparent, hsla(35,100%,63%,.06), transparent);
+}
+.itau-phase-deliver {
+    border-color: #EC7000;
+    background: linear-gradient(to right, transparent, hsla(28,100%,46%,.07), transparent);
+}
+
+/* Persona — orange accent */
+.itau-persona-card {
+    background: hsl(22, 20%, 10%);
+    border-color: rgba(236,112,0,.2);
+}
+.itau-persona-header {
+    background: hsl(22, 22%, 13%);
+}
+
+/* CTA button — orange */
+.prototype-btn.itau-btn {
+    background: #EC7000;
+    color: hsl(0,0%,10%);
+}
+.prototype-btn.itau-btn:hover { background: #c75c00; }
+
+/* Itaú project card icon box — orange accent */
+[data-target-page="itau"] .project-item-icon-box { color: #EC7000; }
+
+/* Prototype CTA subtle orange glow */
+.prototype-cta.itau-cta {
+    box-shadow: inset 0 -60px 80px -20px hsla(28,100%,46%,.06);
+}
+
+/* ── Light theme overrides for Itaú ── */
+[data-theme="light"] .itau-topbar { background: var(--eerie-black2); border-color: var(--jet); }
+[data-theme="light"] .itau-topbar.scrolled {
+    background: hsla(0, 0%, 96%, 0.6);
+    border-bottom-color: hsla(0, 0%, 0%, 0.08);
+}
+[data-theme="light"] .itau-hero {
+    background: var(--eerie-black2);
+    box-shadow: inset 0 -80px 100px -30px hsla(28, 100%, 46%, 0.05);
+}
+[data-theme="light"] .project-tag.itau-tag {
+    color: #a84e00;
+    background: rgba(236,112,0,.1);
+    border-color: rgba(236,112,0,.25);
+}
+[data-theme="light"] .itau-persona-card {
+    background: var(--eerie-black1);
+    border-color: var(--jet);
+}
+[data-theme="light"] .itau-persona-header { background: hsl(22, 22%, 13%); }
+[data-theme="light"] article.itau .persona-name { color: #fff; }
+[data-theme="light"] article.itau .persona-occ-label { color: rgba(255,255,255,.5); }
+[data-theme="light"] article.itau .persona-occ-title { color: rgba(255,255,255,.88); }
+[data-theme="light"] article.itau .persona-body { background: var(--eerie-black1); }
+[data-theme="light"] article.itau .pi-label { color: hsl(0,0%,45%); }
+[data-theme="light"] article.itau .pi-value { color: hsl(0,0%,10%); }
+[data-theme="light"] article.itau .persona-h { color: hsl(0,0%,8%); }
+[data-theme="light"] article.itau .persona-p { color: hsl(0,0%,30%); }
