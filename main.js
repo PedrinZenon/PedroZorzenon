@@ -292,6 +292,104 @@ const translations = {
     'hg-cta-title': 'Explore the full case study',
     'hg-cta-text': 'See the complete HourGlass case study on Dribbble — including all screens, flows and final prototype.',
     'hg-cta-btn': 'View on Dribbble',
+    // ── Itaú Case Study ──
+    'itau-back': 'Projects',
+    'itau-problem-label': 'PROBLEM',
+    'itau-problem-text': "Itaú customers are frustrated with the bank's customer service experience. The existing ChatBot is ineffective, response times are slow, and users feel there's a lack of empathy and personalization — pushing them to use other banks as their primary financial institution.",
+    'itau-problem-item1': 'Ineffective ChatBot that doesn\'t resolve real issues',
+    'itau-problem-item2': 'Long wait times and lack of empathy',
+    'itau-problem-item3': 'Generic, impersonal support responses',
+    'itau-problem-item4': 'High agent workload reducing service quality',
+    'itau-solution-label': 'SOLUTION',
+    'itau-solution-text': 'A redesigned service experience built around 4 key features: an AI-powered ChatBot that understands typed messages, interactive tutorials with step-by-step guides, audio assistance, and an improved feedback system — all focused on making support faster, smarter, and more human.',
+    'itau-solution-item1': 'AI-enhanced ChatBot with real understanding',
+    'itau-solution-item2': 'Interactive tutorials with step-by-step video guides',
+    'itau-solution-item3': 'Audio assistance via voice messages',
+    'itau-solution-item4': 'Robust post-service feedback system',
+    'itau-stat1-label': 'In-Depth Interviews',
+    'itau-stat2-label': 'Digital Channels Mapped',
+    'itau-stat3-label': 'Solution Concepts',
+    'itau-stat4-label': 'Task Completion Rate',
+    'itau-phase-discover': 'DISCOVER',
+    'itau-phase-define': 'DEFINE',
+    'itau-phase-develop': 'DEVELOP',
+    'itau-phase-deliver': 'DELIVER',
+    'itau-desk-title': 'Desk Research & Insights',
+    'itau-desk-desc': "Research on customer complaints through Itaú's ombudsman channels revealed a clear pattern of dissatisfaction with the bank's service model. Users consistently reported:",
+    'itau-desk1-title': 'What makes customers dislike a service interaction?',
+    'itau-desk-item1': 'Lack of empathy from service agents',
+    'itau-desk-item2': 'Vague, unhelpful responses',
+    'itau-desk-item3': 'Lack of training in resolving real issues',
+    'itau-desk-item4': 'Long wait times',
+    'itau-desk-item5': 'Lack of customer support resources',
+    'itau-desk-item6': 'High demand for too few agents',
+    'itau-quote-label': 'Statement from an Itaú service agent — personal contact:',
+    'itau-quote-text': '"Customer portfolios were larger for some people, and consequently the volume of calls was higher than for others — which meant the workload prevented quality service on some demands. When the team was pressured on deadlines and responsiveness, it created a stress factor for everyone."',
+    'itau-hypotheses-title': 'Hypotheses',
+    'itau-hypotheses-desc': 'Based on the desk research findings, the following hypotheses were formulated to guide the research and validate real user pain points:',
+    'itau-hyp1': 'Not knowing where to find support',
+    'itau-hyp2': 'Not knowing how to use the ChatBot',
+    'itau-hyp3': 'Not receiving the help they needed',
+    'itau-hyp4': 'Long wait times and slow service',
+    'itau-hyp5': 'Preference for personalized responses',
+    'itau-hyp6': 'Generic, one-size-fits-all solutions',
+    'itau-forms-title': 'Google Forms Survey',
+    'itau-forms-desc': 'A quantitative survey was distributed to Itaú customers to validate the hypotheses and collect data on the frequency and impact of identified problems — results informed the prioritization of design decisions.',
+    'itau-interview-title': 'In-Depth Interviews',
+    'itau-interview-desc': '17 in-depth interviews were conducted with Itaú customers. Below is the most relevant transcript — Ana, a food engineer who receives her salary via Itaú but uses a different bank as her primary account:',
+    'itau-interview-q1-label': 'Why don\'t you use Itaú as your primary bank?',
+    'itau-interview-q1-ans': '"Honestly, I found it easier to get used to the other bank\'s interface — it\'s simpler and more intuitive. Another thing is support. Itaú has left me stranded several times with urgent transfers when the app was blocking me. Then I had to go through all that hassle to get someone on the line, since the ChatBot has never resolved that kind of problem for me."',
+    'itau-interview-q2-label': 'What do you think of AI in banking support?',
+    'itau-interview-q2-ans': '"It doesn\'t even need to be a real person, honestly. We\'re being flooded with AI everywhere — what does it cost a bank this size to add that option to their support? I hate those ChatBot menus, you have to keep searching and waiting to find the option you need. I\'d rather just type my problem and get a response through text or tutorials — something like that."',
+    'itau-interview-q3-label': 'What attracts you most in a bank?',
+    'itau-interview-q3-ans': '"First, the app\'s layout. And second, the service and the empathy it has with customers — the willingness to actually solve your problem. That wins me over in any context."',
+    'itau-personas-title': 'Personas, Empathy Maps & User Journeys',
+    'itau-personas-desc': 'Based on the interviews and surveys, personas were built alongside empathy maps and user journeys to synthesize the research into actionable design direction:',
+    'itau-channels-title': 'Itaú Digital Channels Mapping',
+    'itau-channels-desc': 'Three digital channels were identified and analyzed to understand where solutions could have the most impact:',
+    'itau-ch1-title': 'Mobile App (Smartphone)',
+    'itau-ch1-text': 'The most-used channel of all. Research shows more than 57% of people prefer apps over websites. The smartphone can be with the user at any moment, making it the primary target for support improvements.',
+    'itau-ch2-title': 'Desktop (Itaú Website)',
+    'itau-ch2-text': 'Less accessed than the smartphone app, but with strong potential to cover a wider range of content due to the larger screen space and greater freedom to redirect users through complex flows.',
+    'itau-ch3-title': 'Smartwatch App',
+    'itau-ch3-text': 'A less conventional channel, but one that could be a great everyday helper. Research indicates smartwatch usage in over 15% of average Brazilians — fast and effective for simple, quick tasks.',
+    'itau-ideation-title': 'Solution Ideation',
+    'itau-ideation-desc': 'Based on research findings — especially the interviews — four solution concepts were ideated to directly address the identified pain points:',
+    'itau-idea1-title': 'AI-Enhanced ChatBot',
+    'itau-idea1-text': 'A more advanced, intelligent chatbot trained to understand a wider variety of queries. It can handle complex problems, integrate with human agents when needed, and even understand audio messages — replacing the frustrating menu-based system.',
+    'itau-idea2-title': 'Audio Assistance',
+    'itau-idea2-text': 'A voice message feature in the Itaú app where customers can contact the AI through audio calls or voice messages — offering an additional option for users who prefer verbal communication or are on the move.',
+    'itau-idea3-title': 'Interactive Tutorials',
+    'itau-idea3-text': 'A dedicated tutorials section where customers can learn to resolve common issues — like setting up a transfer, blocking a lost card, or understanding financial product terms — through step-by-step simulations and video guides.',
+    'itau-idea4-title': 'Improved Feedback System',
+    'itau-idea4-text': 'A robust post-service feedback mechanism allowing customers to rate the quality of their interaction and provide detailed comments — enabling continuous improvement based on real user experience data.',
+    'itau-usability-title': 'Usability Testing',
+    'itau-usability-desc': 'Moderated usability sessions were conducted with real users — 3 tasks, focused on the 3 main features implemented. Results validated the design direction and surfaced specific improvement areas:',
+    'itau-task1-title': 'Task 1 — AI ChatBot Access',
+    'itau-task1-desc': 'Users were asked to locate and initiate a conversation with the AI-powered ChatBot to resolve a simulated issue.',
+    'itau-u1-t1': 'Confused — clicked search icon thinking it led to ChatBot. Recovered after exploring.',
+    'itau-u2-t1': 'Fluid — located and started conversation immediately. No errors.',
+    'itau-u3-t1': 'Satisfied — located ChatBot and started conversation. No errors.',
+    'itau-task2-title': 'Task 2 — Interactive Tutorials',
+    'itau-task2-desc': 'Users were asked to access the tutorials section, select a topic, and watch the video alongside the step-by-step guide.',
+    'itau-u1-t2': 'Satisfied — accessed tutorial and selected topic. No errors.',
+    'itau-u2-t2': 'Fluid — navigated tutorial flow smoothly. No errors.',
+    'itau-u3-t2': 'Satisfied — accessed tutorial and selected topic. No errors.',
+    'itau-task3-title': 'Task 3 — Post-Service Feedback',
+    'itau-task3-desc': 'Users were asked to locate and submit the feedback form that appears after completing a ChatBot interaction or finishing an interactive tutorial.',
+    'itau-u1-t3': 'Satisfied — "It already appeared on screen after finishing the service, so it was easy."',
+    'itau-u2-t3': 'Fluid — submitted feedback without issues. No errors.',
+    'itau-u3-t3': 'Satisfied — located and submitted feedback. No errors.',
+    'itau-nextsteps-title': '✓ Next Steps',
+    'itau-next1-b': 'Tasks 1 & 2:',
+    'itau-next1-t': ' Improve the AI button design and visibility to make it more evident. Priority: High — UI Designer.',
+    'itau-next2-b': 'Task 3:',
+    'itau-next2-t': ' Improve the tutorial step-by-step options to better match the video content. Priority: Medium — UX & UI Designer.',
+    'itau-next3-b': 'Feedback:',
+    'itau-next3-t': ' Improve feedback question options for more informative and comprehensive responses. Priority: Medium — UX Designer.',
+    'itau-cta-title': 'Explore the full case study',
+    'itau-cta-text': 'See the complete Itaú case study on Dribbble — including all screens, flows and final prototype.',
+    'itau-cta-btn': 'View on Dribbble',
   },
   pt: {
     'show-contacts': 'Ver Contatos',
@@ -381,7 +479,7 @@ const translations = {
     'pockit-stat4-label': 'Concorrentes Analisados',
     'pockit-phase-discover': 'DESCOBERTA',
     'pockit-phase-define': 'DEFINIÇÃO',
-    'pockit-phase-develop': 'DESENVOLVIMENTO',
+    'pockit-phase-develop': 'CRIAÇÃO',
     'pockit-phase-deliver': 'ENTREGA',
     'pockit-desk-title': 'Desk Research',
     'pockit-desk-desc': 'Durante o desenvolvimento do Pockit, foram identificados diversos problemas enfrentados pelos usuários na gestão das suas finanças:',
@@ -517,7 +615,7 @@ const translations = {
     'hg-solution-item5': 'Relatórios simplificados e de fácil acesso',
     'hg-phase-discover': 'DESCOBERTA',
     'hg-phase-define': 'DEFINIÇÃO',
-    'hg-phase-develop': 'DESENVOLVIMENTO',
+    'hg-phase-develop': 'CRIAÇÃO',
     'hg-phase-deliver': 'ENTREGA',
     'hg-research-title': 'Pesquisa de Dados',
     'hg-research-goal-label': 'Objetivo:',
@@ -580,6 +678,104 @@ const translations = {
     'hg-cta-title': 'Explore o case study completo',
     'hg-cta-text': 'Veja o case study completo do HourGlass no Dribbble — incluindo todas as telas, fluxos e protótipo final.',
     'hg-cta-btn': 'Ver no Dribbble',
+    // ── Itaú Case Study ──
+    'itau-back': 'Projetos',
+    'itau-problem-label': 'PROBLEMA',
+    'itau-problem-text': 'Os clientes do Itaú estão frustrados com a experiência de atendimento do banco. O ChatBot existente é ineficaz, os tempos de resposta são lentos e os usuários sentem falta de empatia e personalização — o que os leva a usar outros bancos como instituição financeira principal.',
+    'itau-problem-item1': 'ChatBot ineficaz que não resolve problemas reais',
+    'itau-problem-item2': 'Longos tempos de espera e falta de empatia',
+    'itau-problem-item3': 'Respostas genéricas e impessoais',
+    'itau-problem-item4': 'Alta carga dos atendentes comprometendo a qualidade',
+    'itau-solution-label': 'SOLUÇÃO',
+    'itau-solution-text': 'Uma experiência de atendimento redesenhada com base em 4 funcionalidades: um ChatBot com IA que entende mensagens digitadas, tutoriais interativos com guias passo a passo, assistência por áudio e um sistema de feedback melhorado — tudo focado em tornar o suporte mais rápido, inteligente e humano.',
+    'itau-solution-item1': 'ChatBot aprimorado com IA e compreensão real',
+    'itau-solution-item2': 'Tutoriais interativos com guias em vídeo passo a passo',
+    'itau-solution-item3': 'Assistência por áudio via mensagens de voz',
+    'itau-solution-item4': 'Sistema robusto de feedback pós-atendimento',
+    'itau-stat1-label': 'Entrevistas em Profundidade',
+    'itau-stat2-label': 'Canais Digitais Mapeados',
+    'itau-stat3-label': 'Conceitos de Solução',
+    'itau-stat4-label': 'Taxa de Conclusão das Tarefas',
+    'itau-phase-discover': 'DESCOBERTA',
+    'itau-phase-define': 'DEFINIÇÃO',
+    'itau-phase-develop': 'CRIAÇÃO',
+    'itau-phase-deliver': 'ENTREGA',
+    'itau-desk-title': 'Desk Research & Insights',
+    'itau-desk-desc': 'Pesquisas sobre reclamações de clientes nos canais de ouvidoria do Itaú revelaram um padrão claro de insatisfação com o modelo de atendimento do banco. Os usuários relataram consistentemente:',
+    'itau-desk1-title': 'O que faz uma pessoa não gostar de um atendimento?',
+    'itau-desk-item1': 'Falta de empatia dos atendentes',
+    'itau-desk-item2': 'Respostas vagas e sem utilidade',
+    'itau-desk-item3': 'Falta de preparo para resolver problemas reais',
+    'itau-desk-item4': 'Tempo de espera alto',
+    'itau-desk-item5': 'Falta de apoio ao cliente',
+    'itau-desk-item6': 'Alta demanda para poucos atendentes',
+    'itau-quote-label': 'Frase dita por uma atendente do Itaú — contato pessoal:',
+    'itau-quote-text': '"As carteiras de clientes eram maiores para algumas pessoas e, consequentemente, a quantidade de atendimentos era superior às demais — fazendo com que o volume de trabalho impedisse o bom atendimento de algumas demandas. Assim, quando o time era cobrado por prazos e responsividade, gerava-se um fator de estresse para o time como um todo."',
+    'itau-hypotheses-title': 'Hipóteses',
+    'itau-hypotheses-desc': 'Com base nos achados do desk research, as seguintes hipóteses foram formuladas para guiar a pesquisa e validar os reais pontos de dor dos usuários:',
+    'itau-hyp1': 'Não saber onde encontrar o suporte',
+    'itau-hyp2': 'Não saber mexer com o ChatBot',
+    'itau-hyp3': 'Não receber a resposta que precisava',
+    'itau-hyp4': 'Demora no atendimento e tempo de espera alto',
+    'itau-hyp5': 'Preferir receber uma resposta mais personalizada',
+    'itau-hyp6': 'Soluções genéricas e padronizadas',
+    'itau-forms-title': 'Pesquisa com Google Forms',
+    'itau-forms-desc': 'Um questionário quantitativo foi distribuído para clientes do Itaú com o objetivo de validar as hipóteses e coletar dados sobre a frequência e o impacto dos problemas identificados — os resultados orientaram a priorização das decisões de design.',
+    'itau-interview-title': 'Entrevistas em Profundidade',
+    'itau-interview-desc': '17 entrevistas em profundidade foram realizadas com clientes do Itaú. A seguir, a transcrição mais relevante — Ana, engenheira de alimentos que recebe seu salário pelo Itaú, mas usa outro banco como conta principal:',
+    'itau-interview-q1-label': 'Por que você não usa o Itaú como banco principal?',
+    'itau-interview-q1-ans': '"Olha, pra ser sincera, porque eu achei mais fácil de me acostumar com a interface do aplicativo do outro banco — é mais simples e intuitiva. Outra coisa é o suporte: o Itaú por várias vezes já me deixou na mão com transferências urgentes que eu precisava fazer, mas o app estava barrando. Aí foi toda aquela lerdeza pra uma pessoa me atender, já que o ChatBot nunca resolveu esse tipo de problema pra mim."',
+    'itau-interview-q2-label': 'O que você acha de Inteligência Artificial no atendimento bancário?',
+    'itau-interview-q2-ans': '"Nem precisa ser uma pessoa real, pra te falar a verdade. Hoje a gente tá sendo bombardeado com IAs... o que custa um banco desse porte adicionar essa opção no atendimento? Eu odeio aquelas opções do ChatBot — tem que ficar procurando e esperando pra achar a opção que eu preciso. Prefiro escrever meu problema e ser respondida por textos ou tutoriais, sei lá, algo assim..."',
+    'itau-interview-q3-label': 'O que mais te atrai em um banco?',
+    'itau-interview-q3-ans': '"Com certeza o layout do aplicativo em primeiro lugar. E em segundo, o atendimento e a empatia — a vontade de querer resolver o problema do cliente. Isso me ganha muito em qualquer aspecto."',
+    'itau-personas-title': 'Personas, Mapas de Empatia & Jornadas',
+    'itau-personas-desc': 'Com base nas entrevistas e pesquisas, as personas foram criadas junto com mapas de empatia e jornadas do usuário para sintetizar os dados em uma direção de design acionável:',
+    'itau-channels-title': 'Levantamento dos Canais Digitais Itaú',
+    'itau-channels-desc': 'Três canais digitais foram identificados e analisados para entender onde as soluções teriam maior impacto:',
+    'itau-ch1-title': 'Mobile (APP no Smartphone)',
+    'itau-ch1-text': 'O canal mais usado de todos. Pesquisas indicam que mais de 57% das pessoas preferem aplicativos a sites. O celular pode estar a qualquer momento com o usuário, tornando-o o principal alvo para melhorias no suporte.',
+    'itau-ch2-title': 'Desktop (Site Itaú)',
+    'itau-ch2-text': 'Canal com menos acesso que o APP do smartphone, mas com grande potencial para cobrir uma ampla gama de conteúdos devido ao espaço maior e à liberdade de redirecionar o usuário por fluxos mais complexos.',
+    'itau-ch3-title': 'Smartwatches (APP no relógio)',
+    'itau-ch3-text': 'Um canal menos convencional, mas que pode ser de grande ajuda no dia a dia. Pesquisas indicam uso de smartwatches em mais de 15% dos brasileiros — rápido e eficaz para tarefas simples e cotidianas.',
+    'itau-ideation-title': 'Ideações de Solução',
+    'itau-ideation-desc': 'Com base nos achados da pesquisa — especialmente nas entrevistas — quatro conceitos de solução foram ideados para endereçar diretamente os pontos de dor identificados:',
+    'itau-idea1-title': 'ChatBot aprimorado com Inteligência Artificial',
+    'itau-idea1-text': 'Um chatbot mais avançado e inteligente, treinado para lidar com uma variedade maior de consultas. Pode resolver problemas complexos, integrar com agentes humanos quando necessário e até entender mensagens de áudio — substituindo o frustrante sistema de menus.',
+    'itau-idea2-title': 'Assistência por Áudio',
+    'itau-idea2-text': 'Uma funcionalidade de mensagem de voz no aplicativo do Itaú para que os clientes possam entrar em contato com a IA por chamada ou áudio — uma opção adicional para quem prefere comunicação verbal ou está em deslocamento.',
+    'itau-idea3-title': 'Tutoriais Interativos',
+    'itau-idea3-text': 'Uma seção dedicada de tutoriais onde os clientes aprendem a resolver problemas comuns — como configurar uma transferência, bloquear um cartão perdido ou entender termos financeiros — por meio de simulações passo a passo e vídeos explicativos.',
+    'itau-idea4-title': 'Sistema de Feedback Melhorado',
+    'itau-idea4-text': 'Um sistema robusto de feedback pós-atendimento que permite aos clientes avaliar a qualidade da interação e fornecer comentários detalhados — possibilitando melhoria contínua baseada em dados reais de experiência do usuário.',
+    'itau-usability-title': 'Testes de Usabilidade',
+    'itau-usability-desc': 'Sessões de usabilidade moderadas foram realizadas com usuários reais — 3 tarefas, focadas nas 3 principais funcionalidades implementadas. Os resultados validaram a direção do design e identificaram áreas específicas de melhoria:',
+    'itau-task1-title': 'Tarefa 1 — Acesso ao ChatBot com IA',
+    'itau-task1-desc': 'Os usuários foram solicitados a localizar e iniciar uma conversa com o ChatBot baseado em IA para resolver um problema simulado.',
+    'itau-u1-t1': 'Confuso — clicou na lupa achando que seria por lá que acessaria o ChatBot. Se recuperou explorando a interface.',
+    'itau-u2-t1': 'Fluido — localizou e iniciou a conversa imediatamente. Sem erros.',
+    'itau-u3-t1': 'Satisfeito — localizou o ChatBot e iniciou a conversa. Sem erros.',
+    'itau-task2-title': 'Tarefa 2 — Tutoriais Interativos',
+    'itau-task2-desc': 'Os usuários foram solicitados a acessar a seção de tutoriais, selecionar um tema e assistir ao vídeo junto com o guia passo a passo.',
+    'itau-u1-t2': 'Satisfeito — acessou o tutorial e selecionou o tema. Sem erros.',
+    'itau-u2-t2': 'Fluido — navegou pelo fluxo do tutorial tranquilamente. Sem erros.',
+    'itau-u3-t2': 'Satisfeito — acessou o tutorial e selecionou o tema. Sem erros.',
+    'itau-task3-title': 'Tarefa 3 — Feedback Pós-Atendimento',
+    'itau-task3-desc': 'Os usuários foram solicitados a localizar e enviar o formulário de feedback que aparece após finalizar um atendimento pelo ChatBot ou completar um tutorial interativo.',
+    'itau-u1-t3': 'Satisfeito — "Ele já aparece na tela depois de finalizar o atendimento, aí fica fácil."',
+    'itau-u2-t3': 'Fluido — enviou o feedback sem dificuldades. Sem erros.',
+    'itau-u3-t3': 'Satisfeito — localizou e enviou o feedback. Sem erros.',
+    'itau-nextsteps-title': '✓ Próximos Passos',
+    'itau-next1-b': 'Tarefas 1 & 2:',
+    'itau-next1-t': ' Melhoria no design e visibilidade do botão da IA para torná-lo mais evidente. Prioridade: Alta — UI Designer.',
+    'itau-next2-b': 'Tarefa 3:',
+    'itau-next2-t': ' Melhoria nas opções e no passo a passo abaixo do vídeo para "casar melhor" com o tutorial. Prioridade: Média — UX e UI Designer.',
+    'itau-next3-b': 'Feedback:',
+    'itau-next3-t': ' Melhoria nas opções e perguntas do feedback para respostas mais esclarecedoras. Prioridade: Média — UX Designer.',
+    'itau-cta-title': 'Explore o case study completo',
+    'itau-cta-text': 'Veja o case study completo do Itaú no Dribbble — incluindo todas as telas, fluxos e protótipo final.',
+    'itau-cta-btn': 'Ver no Dribbble',
   }
 };
 
@@ -606,7 +802,7 @@ function applyTranslations(lang) {
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
   // Language button flag — shows the OTHER language's flag (what you'll switch TO)
-  ['lang-toggle', 'lang-toggle-cs', 'lang-toggle-hg'].forEach(id => {
+  ['lang-toggle', 'lang-toggle-cs', 'lang-toggle-hg', 'lang-toggle-itau'].forEach(id => {
     const langBtn = document.getElementById(id);
     if (!langBtn) return;
     const img = langBtn.querySelector('img');
@@ -640,13 +836,23 @@ function applyTranslations(lang) {
 // =============================================
 
 function initTheme() {
-  const saved = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-  updateThemeIcon(saved);
+  const saved = localStorage.getItem('theme');
+  let theme;
+  if (saved) {
+    // User explicitly toggled — respect their choice
+    theme = saved;
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    theme = 'light';
+  } else {
+    // No preference or prefers dark → dark
+    theme = 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeIcon(theme);
 }
 
 function updateThemeIcon(theme) {
-  ['theme-toggle', 'theme-toggle-cs', 'theme-toggle-hg'].forEach(id => {
+  ['theme-toggle', 'theme-toggle-cs', 'theme-toggle-hg', 'theme-toggle-itau'].forEach(id => {
     const btn = document.getElementById(id);
     if (!btn) return;
     const icon = btn.querySelector('ion-icon');
@@ -890,7 +1096,14 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTranslations(currentLang === 'en' ? 'pt' : 'en');
   });
 
-  // Topbar glassmorphism on scroll (Pockit + HourGlass)
+  const themeItau = document.getElementById('theme-toggle-itau');
+  const langItau  = document.getElementById('lang-toggle-itau');
+  if (themeItau) themeItau.addEventListener('click', toggleTheme);
+  if (langItau)  langItau.addEventListener('click', () => {
+    applyTranslations(currentLang === 'en' ? 'pt' : 'en');
+  });
+
+  // Topbar glassmorphism on scroll (Pockit + HourGlass + Itaú)
   const pockitTopbar = document.querySelector('.pockit-topbar');
   if (pockitTopbar) {
     window.addEventListener('scroll', () => {
@@ -902,6 +1115,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hgTopbar) {
     window.addEventListener('scroll', () => {
       hgTopbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  }
+
+  const itauTopbar = document.querySelector('.itau-topbar');
+  if (itauTopbar) {
+    window.addEventListener('scroll', () => {
+      itauTopbar.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
   }
 
